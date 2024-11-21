@@ -1,93 +1,140 @@
+/* Global CSS Variables */
+:root {
+  --font-family: Arial, sans-serif;
+  --primary-color: #333;
+  --secondary-color: #555;
+  --tertiary-color: #666;
+  --background-color: #fff;
+  --light-background: #f9f9f9;
+  --white-color: white;
+  --padding: 1rem;
+  --margin-auto: 2rem auto;
+  --border-radius: 50%;
+  --box-border: 1px solid rgba(0, 0, 0, 0.1);
+  --font-size-large: 1.5rem;
+  --font-size-medium: 1.2rem;
+  --font-size-small: 0.9rem;
+}
+
+/* Universal Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* General Reset */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: #000;
-    background-color: #fff;
-  }
-  
-  /* Header and Navigation */
-  header {
-    background-color: #333;
-    color: white;
-  }
-  
-  nav {
-    text-align: center;
-    padding: 1rem;
-  }
-  
-  nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 1rem;
-    font-size: 1.2rem;
-  }
-  
-  nav a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Main Content */
-  main {
-    max-width: 840px;
-    margin: 2rem auto;
-    text-align: center;
-    color: #333;
-    background-color: #f9f9f9;
-  }
-  
-  main h1 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 1rem;
-  }
-  
-  main img {
-    width: 150px;
-    height: auto;
-    border-radius: 50%;
-    margin-bottom: 1rem;
-  }
-  p {
-    padding: 0;
-  }
-  /* Aside Section */
-  aside {
-    width: 20rem;
-    margin: 2rem auto;
-    padding: 1rem;
-    background-color: #f9f9f9;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    text-align: center;
-    color: #333;
-  }
-  
-  aside img {
-    width: 200px;
-    height: auto;
-    margin-bottom: 1rem;
-  }
-  
-  aside h2 {
-    font-size: 1.5rem;
-    color: #555;
-    margin-bottom: 0.5rem;
-  }
-  
-  aside p {
-    font-size: 1rem;
-    color: #666;
-  }
-  
-  /* Footer */
-  footer {
-    margin-top: 15px;
-    border-top: 1px solid #000;
-    text-align: center;
-    padding: 1rem;
-    background-color: #333;
-    color: white;
-    font-size: 0.9rem;
-  }
-  
+  margin: 0;
+  font-family: var(--font-family);
+  color: var(--primary-color);
+  background-color: var(--background-color);
+}
+
+/* Header and Navigation */
+header {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+nav {
+  text-align: center;
+  padding: var(--padding);
+}
+
+nav a {
+  color: var(--white-color);
+  text-decoration: none;
+  margin: 0 1rem;
+  font-size: var(--font-size-medium);
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content */
+main {
+  max-width: 840px;
+  margin: var(--margin-auto);
+  text-align: center;
+  color: var(--primary-color);
+  background-color: var(--light-background);
+}
+
+main h1 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+main img {
+  width: 150px;
+  height: auto;
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+
+  float: right;
+
+}
+
+p {
+  padding: 0;
+}
+
+/* Aside Section */
+aside {
+  width: 20rem;
+  margin: var(--margin-auto);
+  padding: var(--padding);
+  background-color: var(--light-background);
+  border: var(--box-border);
+  text-align: center;
+  color: var(--primary-color);
+  position: relative;
+}
+
+/* Class Selectors */
+.box {
+  margin: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  background-color: #ddd;
+  color: #000;
+}
+
+
+aside img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+aside h2 {
+  font-size: var(--font-size-large);
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+
+  position: absolute;
+  top: 47px;
+  left: 150px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+aside p {
+  font-size: 1rem;
+  color: var(--tertiary-color);
+}
+
+/* Footer */
+footer {
+  margin-top: 15px;
+  border-top: 1px solid var(--primary-color);
+  text-align: center;
+  padding: var(--padding);
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-size: var(--font-size-small);
+}
