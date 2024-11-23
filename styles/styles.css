@@ -37,7 +37,7 @@ header {
   padding: var(--padding);
 }
 
-/* Navigation */
+/* Class Selectors */
 nav {
   text-align: center;
   padding: var(--padding);
@@ -77,11 +77,6 @@ main img {
   border-radius: var(--border-radius);
   margin-bottom: 1rem;
   float: right;
-}
-
-/* Paragraph */
-p {
-  padding: 0;
 }
 
 /* Sidebar */
