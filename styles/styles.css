@@ -1,4 +1,4 @@
-/* Global CSS Variables */
+/* CSS Variables */
 :root {
   --font-family: Arial, sans-serif;
   --primary-color: #333;
@@ -6,7 +6,7 @@
   --tertiary-color: #666;
   --background-color: #fff;
   --light-background: #f9f9f9;
-  --white-color: white;
+  --white-color: #fff;
   --padding: 1rem;
   --margin-auto: 2rem auto;
   --border-radius: 50%;
@@ -16,30 +16,32 @@
   --font-size-small: 0.9rem;
 }
 
-/* Universal Reset */
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* General Reset */
 body {
   margin: 0;
-  font-family: var(--font-family);
   color: var(--primary-color);
   background-color: var(--background-color);
+  font-family: var(--font-family);
 }
 
-/* Header and Navigation */
+/* Header */
 header {
   background-color: var(--primary-color);
   color: var(--white-color);
+  padding: var(--padding);
 }
 
+/* Navigation */
 nav {
   text-align: center;
   padding: var(--padding);
+  background-color: var(--primary-color);
 }
 
 nav a {
@@ -57,6 +59,7 @@ nav a:hover {
 main {
   max-width: 840px;
   margin: var(--margin-auto);
+  padding: var(--padding);
   text-align: center;
   color: var(--primary-color);
   background-color: var(--light-background);
@@ -73,36 +76,23 @@ main img {
   height: auto;
   border-radius: var(--border-radius);
   margin-bottom: 1rem;
-
   float: right;
-
 }
 
+/* Paragraph */
 p {
   padding: 0;
 }
 
-/* Aside Section */
+/* Sidebar */
 aside {
   width: 20rem;
-  margin: var(--margin-auto);
   padding: var(--padding);
   background-color: var(--light-background);
-  border: var(--box-border);
   text-align: center;
   color: var(--primary-color);
   position: relative;
 }
-
-/* Class Selectors */
-.box {
-  margin: 1rem;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 1rem;
-  background-color: #ddd;
-  color: #000;
-}
-
 
 aside img {
   width: 200px;
@@ -114,18 +104,25 @@ aside h2 {
   font-size: var(--font-size-large);
   color: var(--secondary-color);
   margin-bottom: 0.5rem;
-
   position: absolute;
   top: 47px;
   left: 150px;
-  // background-color: rgba(255, 255, 255, 0.8);
-  /* padding: 0.5rem; */
   border-radius: 5px;
+  background-color: var(--background-color);
 }
 
 aside p {
   font-size: 1rem;
   color: var(--tertiary-color);
+}
+
+/* Boxes */
+.box {
+  margin: 1rem;
+  border: var(--box-border);
+  padding: var(--padding);
+  background-color: #ddd;
+  color: #000;
 }
 
 /* Footer */
@@ -137,4 +134,10 @@ footer {
   background-color: var(--primary-color);
   color: var(--white-color);
   font-size: var(--font-size-small);
+}
+
+footer .social-links a {
+  margin: 0 0.5rem;
+  color: var(--white-color);
+  text-decoration: none;
 }
