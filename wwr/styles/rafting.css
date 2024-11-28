@@ -4,7 +4,7 @@
   --secondary-color: #ffffff;
   --accent-color: #e8e8ff;
   --text-color: #333333;
-  --font-family: 'Roboto', sans-serif;
+  --font-family: "Roboto", sans-serif;
   --padding: 1rem;
   --max-width: 1000px;
 }
@@ -46,34 +46,86 @@ nav a:hover {
   text-decoration: underline;
 }
 
-main {
+.body-main {
   max-width: var(--max-width);
   margin: 2rem auto;
   padding: var(--padding);
 }
 
+/* Hero container styles */
 .hero {
-  text-align: center;
-  background-color: var(--accent-color);
-  padding: var(--padding);
-  border-radius: 10px;
-}
-
-.hero h1 {
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-}
-
-.hero article {
+  position: relative;
+  height: 100vh; /* Full viewport height */
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  color: white; /* Text color */
+  text-align: center;
+  overflow: hidden;
+
+  width: 100%; /* Asegura que ocupe todo el ancho */
+  margin: 0; /* Elimina cualquier margen */
+  padding: 0; /* Opcional, para asegurar que no tenga relleno extra */
 }
 
 .hero article img {
   max-width: 150px;
   border-radius: 50%;
+  float: right; /* Flota la imagen hacia la derecha */
+  margin-left: 1rem; /* Espacio entre el texto y la imagen */
+}
+
+/* Background image */
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: hidden; /* Prevents overflow */
+  z-index: -1;
+}
+
+.hero-bg img {
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  object-fit: cover; /* Ensures the image covers the space without distortion */
+}
+
+/* Hero content */
+.hero-content {
+  z-index: 1;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+.hero-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.hero-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  color: #ffffff;
+  background-color: #1a73e8; /* Primary color */
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.hero-button:hover {
+  background-color: #155ab2; /* Darker shade of primary color */
 }
 
 section {
@@ -109,7 +161,7 @@ footer {
 }
 
 footer p {
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
 footer .sociallinks {
@@ -119,7 +171,13 @@ footer .sociallinks {
   gap: 1rem;
 }
 
+footer .sociallinks a {
+  text-decoration: none;
+}
+
 footer .sociallinks a img {
+  width: 30px;
+  height: auto;
   width: 30px;
   height: auto;
 }
