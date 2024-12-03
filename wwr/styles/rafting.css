@@ -20,136 +20,151 @@ body {
   font-family: var(--font-family);
   color: var(--text-color);
   background-color: var(--secondary-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
+/* Header */
 header {
   background-color: var(--primary-color);
   color: var(--secondary-color);
   padding: var(--padding);
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 120px 3fr; /* Logo, título, y navegación */
   align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding-inline: 10rem;
 }
 
 header .logo img {
   max-width: 100px;
 }
 
-nav a {
+header h1 {
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+}
+
+nav {
+  text-align: right;
+}
+
+.navigation {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  gap: 1rem;
+}
+
+.navigation li {
+  margin: 0;
+}
+
+.navigation a {
   color: var(--secondary-color);
   text-decoration: none;
-  margin: 0 var(--padding);
   font-weight: bold;
+  padding: 0.5rem 1rem;
 }
 
-nav a:hover {
+.navigation a:hover {
   text-decoration: underline;
+  color: #ff9900; /* Cambia el color en hover */
 }
 
+/* Hero Section */
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+}
+
+.hero-content img {
+  width: 100px;
+}
+
+/* Body Main */
 .body-main {
   max-width: var(--max-width);
   margin: 2rem auto;
   padding: var(--padding);
 }
 
-/* Hero container styles */
-.hero {
-  position: relative;
-  height: 100vh; /* Full viewport height */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white; /* Text color */
-  text-align: center;
-  overflow: hidden;
-
-  width: 100%; /* Asegura que ocupe todo el ancho */
-  margin: 0; /* Elimina cualquier margen */
-  padding: 0; /* Opcional, para asegurar que no tenga relleno extra */
-}
-
-.hero article img {
-  max-width: 150px;
-  border-radius: 50%;
-  float: right; /* Flota la imagen hacia la derecha */
-  margin-left: 1rem; /* Espacio entre el texto y la imagen */
-}
-
-/* Background image */
-.hero-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: hidden; /* Prevents overflow */
-  z-index: -1;
-}
-
-.hero-bg img {
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  object-fit: cover; /* Ensures the image covers the space without distortion */
-}
-
-/* Hero content */
-.hero-content {
-  z-index: 1;
-  max-width: 800px;
-  padding: 2rem;
-}
-
-.hero-title {
-  font-family: "Roboto", sans-serif;
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-  line-height: 1.2;
-}
-
-.hero-text {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
-
-.hero-button {
-  display: inline-block;
-  padding: 0.8rem 2rem;
-  font-size: 1rem;
-  color: #ffffff;
-  background-color: #1a73e8; /* Primary color */
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
-
-.hero-button:hover {
-  background-color: #155ab2; /* Darker shade of primary color */
-}
-
-section {
+/* History Section */
+/* History Section */
+.history {
   margin-top: 2rem;
   padding: var(--padding);
+  text-align: center;
 }
 
-section h2 {
+.history h2 {
   color: var(--primary-color);
   margin-bottom: 1rem;
+  font-size: 2rem;
 }
 
+.history-content {
+  display: grid;
+  grid-template-columns: 1fr 200px 1fr; /* Dos columnas para los textos y una para la imagen */
+  gap: 1rem;
+  align-items: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.history-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.history-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Agrega un pequeño sombreado */
+}
+
+/* Adventure Awaits You Section */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 1rem;
+  text-align: center;
 }
 
-.gallery img {
+figure img {
   width: 100%;
   height: auto;
   border-radius: 10px;
 }
 
+figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* Footer */
 footer {
   background-color: var(--primary-color);
   color: var(--secondary-color);
@@ -160,24 +175,12 @@ footer {
   margin-top: 2rem;
 }
 
-footer p {
-  margin: 0 auto;
-}
-
 footer .sociallinks {
-  position: absolute;
-  right: 0;
   display: flex;
   gap: 1rem;
 }
 
-footer .sociallinks a {
-  text-decoration: none;
-}
-
-footer .sociallinks a img {
-  width: 30px;
-  height: auto;
+footer .sociallinks img {
   width: 30px;
   height: auto;
 }
