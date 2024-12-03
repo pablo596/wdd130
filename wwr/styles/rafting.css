@@ -169,10 +169,15 @@ footer {
   background-color: var(--primary-color);
   color: var(--secondary-color);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Espacia los elementos: párrafo y sociallinks */
   align-items: center;
-  padding: var(--padding);
-  margin-top: 2rem;
+  padding: 1rem;
+}
+
+footer p {
+  flex: 1; /* Permite que el párrafo ocupe el espacio necesario */
+  text-align: center; /* Centra el texto del párrafo */
+  margin: 0;
 }
 
 footer .sociallinks {
