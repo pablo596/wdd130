@@ -76,7 +76,7 @@ nav {
   color: #ff9900; /* Cambia el color en hover */
 }
 
-main .contact-title-page {
+.contact-title-page {
   font-size: 2.5rem;
   color: var(--primary-color);
   text-align: center;
