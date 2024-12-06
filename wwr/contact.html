@@ -10,12 +10,6 @@
     <meta name="author" content="Pablo Palacios">
     <title>Contact Us - White Water Rafting</title>
     <link rel="stylesheet" href="styles/rafting.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-   >
   </head>
   <body>
     <header>
@@ -33,6 +27,7 @@
       </nav>
     </header>
     <main>
+      <h1 class="contact-title-page">Contact Us</h1>
       <section class="company-info">
         <h2>Contact Information</h2>
         <p>
@@ -42,13 +37,13 @@
         <p><strong>Email:</strong> info@whitewaterrafting.com</p>
         <div class="map-container">
           <iframe
+            class="map-frame"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345094326!2d144.95565131567858!3d-37.81720957975133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43bf0b9d97%3A0xb0ef0b6e7d5699f8!2sFederation%20Square!5e0!3m2!1sen!2sus!4v1611027432806!5m2!1sen!2sus"
             width="600"
             height="450"
-            style="border: 0"
             allowfullscreen=""
             loading="lazy"
-         ></iframe>
+          ></iframe>
         </div>
       </section>
 
@@ -75,26 +70,47 @@
         <form>
           <fieldset>
             <legend>Contact Information</legend>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" required>
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" required>
+
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
           </fieldset>
           <fieldset>
             <legend>Message Details</legend>
             <p>What is the purpose of your message?</p>
-            <label
-             ><input type="radio" name="purpose" value="general" required>
-              General Inquiry</label
-           >
-            <label
-             ><input type="radio" name="purpose" value="reservation">
-              Reservation Question</label
-           >
-            <label
-             ><input type="radio" name="purpose" value="suggestion"> Website
-              Suggestion</label
-           >
+            <label for="purpose-general">
+              <input
+                type="radio"
+                id="purpose-general"
+                name="purpose"
+                value="general"
+                required
+             >
+              General Inquiry
+            </label>
+            <label for="purpose-reservation">
+              <input
+                type="radio"
+                id="purpose-reservation"
+                name="purpose"
+                value="reservation"
+             >
+              Reservation Question
+            </label>
+            <label for="purpose-suggestion">
+              <input
+                type="radio"
+                id="purpose-suggestion"
+                name="purpose"
+                value="suggestion"
+             >
+              Website Suggestion
+            </label>
+
             <label for="message">Message:</label>
             <textarea
               id="message"
@@ -102,11 +118,12 @@
               rows="4"
               placeholder="Write your message here..."
               required
-           ></textarea>
-            <label
-             ><input type="checkbox" name="newsletter"> Please subscribe me
-              to the monthly newsletter</label
-           >
+            ></textarea>
+
+            <label for="newsletter">
+              <input type="checkbox" id="newsletter" name="newsletter">
+              Please subscribe me to the monthly newsletter
+            </label>
           </fieldset>
           <button type="submit">Submit Message</button>
         </form>
@@ -117,8 +134,8 @@
       <a
         href="https://app.moqups.com/vWPbQNdf3vw2HYN5aypUrBaqwIv0eZrh/view/page/ad64222d5"
         target="_blank"
-       >View Wireframe</a
-     >
+        >View Wireframe</a
+      >
       <nav class="sociallinks">
         <a href="https://facebook.com">
           <img src="images/facebook.svg" alt="Facebook">
