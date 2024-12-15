@@ -672,7 +672,8 @@ footer .sociallinks img {
 }
 
 /* Styling for the wireframe link */
-footer a[href*="moqups"] {
+footer a[href*="moqups"],
+footer a[href*="github.com"] {
   color: var(--secondary-color);
   background-color: var(--primary-color);
   padding: 0.5rem 1rem;
@@ -683,7 +684,8 @@ footer a[href*="moqups"] {
   transition: all 0.3s ease-in-out;
 }
 
-footer a[href*="moqups"]:hover {
+footer a[href*="moqups"]:hover,
+footer a[href*="github.com"]:hover {
   background-color: #155ab2;
   box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
   text-decoration: underline;
